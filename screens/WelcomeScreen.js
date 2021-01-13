@@ -39,7 +39,7 @@ export default class WelcomeScreen extends Component {
     }else{
       firebase.auth().createUserWithEmailAndPassword(username, password)
       .then((response)=>{
-        db.collection('users').add({
+        db.collection('User').add({
           first_name:this.state.firstName,
           last_name:this.state.lastName,
           mobile_number:this.state.mobileNumber,

@@ -3,9 +3,11 @@ import { Image } from 'react-native';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 import { AppStackNavigator } from './AppStackNavigator'
 import Exchange from '../screens/Exchange';
+import HomeScreen from '../screens/HomeScreen';
 
 
 export const AppTabNavigator = createBottomTabNavigator({
+  
   HomeScreen : {
     screen: AppStackNavigator,
     navigationOptions :{
@@ -20,4 +22,8 @@ export const AppTabNavigator = createBottomTabNavigator({
       tabBarLabel : "Exchange",
     }
   }
+  
+},
+{
+  initialRouteName:'HomeScreen'
 });

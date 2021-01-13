@@ -41,7 +41,7 @@ export default class NotificationScreen extends Component{
   }
 
   componentWillUnmount(){
-    notificationRef()
+    this.notificationRef()
   }
 
   keyExtractor = (item, index) => index.toString()

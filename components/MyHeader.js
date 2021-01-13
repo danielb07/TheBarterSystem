@@ -32,7 +32,7 @@ componentDidMount(){
     return(
       <View>
         <Icon name='bell' type='font-awesome' color='#696969' size={25}
-          onPress={() =>this.props.navigation.navigate('Notification')}/>
+          onPress={() =>{this.props.navigation.navigate('Notification')}}/>
          <Badge
           value={this.state.value}
          containerStyle={{ position: 'absolute', top: -4, right: -4 }}/>

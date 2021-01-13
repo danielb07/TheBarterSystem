@@ -23,7 +23,7 @@ export default class ReceiverDetailsScreen extends Component{
   }
 
   getUserDetails=(userId)=>{
-      db.collection("users").where('email_id','==', userId).get()
+      db.collection("User").where('email_id','==', userId).get()
       .then((snapshot)=>{
         snapshot.forEach((doc) => {
           console.log(doc.data().first_name);
@@ -37,7 +37,7 @@ export default class ReceiverDetailsScreen extends Component{
 
 getreceiverDetails(){
   console.log("receiver ",this.state.receiverId);
-  db.collection('users').where('username','==',this.state.receiverId).get()
+  db.collection('User').where('username','==',this.state.receiverId).get()
   .then(snapshot=>{
     snapshot.forEach(doc=>{
       this.setState({

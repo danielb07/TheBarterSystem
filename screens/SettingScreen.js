@@ -21,7 +21,7 @@ export default class SettingScreen extends Component{
   var user = firebase.auth().currentUser;
   var email= user.email
 
- db.collection('users').where('username','==',email).get()
+ db.collection('User').where('username','==',email).get()
   .then(snapshot => {
     snapshot.forEach(doc => {
        var data = doc.data()
@@ -40,7 +40,7 @@ export default class SettingScreen extends Component{
 
  updateData(){
 
-  db.collection('users').doc(this.state.docId)
+  db.collection('User').doc(this.state.docId)
     .update({
       first_name: this.state.firstName,
       last_name: this.state.lastName,
